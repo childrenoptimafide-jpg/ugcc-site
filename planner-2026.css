@@ -1,0 +1,547 @@
+/* ============================================================
+   ПЛАНЕР ЦЕРКОВНИХ ПОДІЙ 2026
+   Приход Успения Пресвятой Богородицы · Кишинёв
+   Стиль: благородный, церковный, адаптивный
+   ============================================================ */
+
+/* ── Блок плнера ─────────────────────────────────────────── */
+#calendar-2026 {
+  background: #f8f6f2;
+  border-top: 3px solid var(--gold);
+}
+
+.cal-intro {
+  max-width: 680px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+.cal-intro-verse {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--primary-dark);
+  border-left: 3px solid var(--gold);
+  border-right: 3px solid var(--gold);
+  padding: 14px 28px;
+  margin: 16px 0 0;
+  line-height: 1.7;
+}
+
+/* ── Навигация по месяцам ────────────────────────────────── */
+.cal-month-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.cal-month-btn {
+  background: var(--card);
+  border: 1px solid var(--line);
+  color: var(--muted);
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.15s;
+  font-family: "Inter", sans-serif;
+}
+.cal-month-btn:hover {
+  background: var(--bg-alt);
+  color: var(--primary-dark);
+  border-color: var(--primary);
+}
+.cal-month-btn.active {
+  background: var(--primary-dark);
+  color: #fff;
+  border-color: var(--primary-dark);
+  transform: none;
+}
+
+/* ── Панель главных событий месяца ─────────────────────── */
+.cal-highlights {
+  background: linear-gradient(135deg, #3f5a6b 0%, #2d4357 100%);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  margin-bottom: 40px;
+  color: #fff;
+}
+.cal-highlights-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 14px;
+}
+.cal-highlights h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.25rem;
+  margin: 0 0 20px;
+  color: #fff;
+  font-weight: 600;
+}
+.cal-highlights-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.cal-highlights-list li {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  max-width: 280px;
+}
+.cal-highlights-list li:hover {
+  background: rgba(255,255,255,0.22);
+  transform: translateY(-2px);
+}
+.cal-highlights-list .hl-date {
+  font-size: 0.72rem;
+  color: var(--gold);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 3px;
+}
+.cal-highlights-list .hl-title {
+  font-size: 0.88rem;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* ── Сетка событий месяца ───────────────────────────────── */
+.cal-month-view {
+  /* показывается по одному месяцу */
+}
+.cal-month-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  color: var(--primary-dark);
+  margin: 0 0 8px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--line);
+}
+.cal-month-subtitle {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin: 0 0 28px;
+}
+
+/* ── Легенда категорий ──────────────────────────────────── */
+.cal-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+.cal-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 4px 10px 4px 4px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  transition: border-color 0.2s, background 0.2s;
+}
+.cal-legend-item:hover {
+  background: var(--bg-alt);
+  border-color: var(--line);
+}
+.cal-legend-item.active {
+  border-color: var(--primary);
+  background: #edf3f7;
+}
+.cal-legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── Карточки событий ────────────────────────────────────── */
+.cal-events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 16px;
+}
+
+.cal-event-card {
+  background: var(--card);
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  padding: 18px 20px;
+  cursor: pointer;
+  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+  position: relative;
+  overflow: hidden;
+}
+.cal-event-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(30,45,60,0.1);
+}
+
+/* Полоса категории слева */
+.cal-event-card::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  border-radius: 14px 0 0 14px;
+  background: var(--cat-color, var(--primary));
+}
+
+/* Главные события — золотая рамка */
+.cal-event-card.is-highlight {
+  border-color: rgba(185, 146, 82, 0.4);
+  background: #fffdf8;
+}
+.cal-event-card.is-highlight::before {
+  background: var(--gold);
+}
+
+/* Шапка карточки */
+.cal-event-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.cal-event-date {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+.cal-event-cat-badge {
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.cal-event-title {
+  font-family: "Playfair Display", serif;
+  font-size: 0.98rem;
+  color: var(--primary-dark);
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 6px;
+}
+.cal-event-title.is-highlight {
+  font-size: 1.05rem;
+  color: #2d4357;
+}
+.cal-event-meta {
+  font-size: 0.78rem;
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.cal-event-meta span {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.cal-event-more {
+  font-size: 0.75rem;
+  color: var(--primary);
+  font-weight: 500;
+  margin-top: 10px;
+  display: inline-block;
+}
+.cal-event-card:hover .cal-event-more {
+  text-decoration: underline;
+}
+
+/* Метка «главное» */
+.cal-star {
+  color: var(--gold);
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+/* Регулярные события ─ слегка иной фон */
+.cal-event-card.is-recurring {
+  background: var(--bg-alt);
+}
+.cal-event-card.is-recurring::before {
+  opacity: 0.6;
+}
+.cal-event-recurring-badge {
+  font-size: 0.68rem;
+  background: #edf3f7;
+  color: var(--primary);
+  border: 1px solid #c8d8e2;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-top: 6px;
+  display: inline-block;
+}
+
+/* ── Секция регулярных событий ──────────────────────────── */
+.cal-recurring-section {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px dashed var(--line);
+}
+.cal-recurring-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  color: var(--primary-dark);
+  margin: 0 0 18px;
+}
+.cal-recurring-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+}
+.cal-rec-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--card);
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: box-shadow 0.18s, transform 0.15s;
+}
+.cal-rec-item:hover {
+  box-shadow: 0 4px 14px rgba(30,45,60,0.08);
+  transform: translateY(-2px);
+}
+.cal-rec-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+.cal-rec-text strong {
+  font-size: 0.85rem;
+  color: var(--primary-dark);
+  display: block;
+  line-height: 1.3;
+}
+.cal-rec-text small {
+  font-size: 0.75rem;
+  color: var(--muted);
+  display: block;
+  margin-top: 2px;
+}
+
+/* ── Модальное окно ─────────────────────────────────────── */
+.cal-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 30, 40, 0.65);
+  z-index: 2100; /* выше lightbox сайта (2000) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.22s ease;
+  backdrop-filter: blur(3px);
+}
+.cal-modal-overlay.is-open {
+  opacity: 1;
+  pointer-events: all;
+}
+.cal-modal {
+  background: #fff;
+  border-radius: 20px;
+  max-width: 540px;
+  width: 100%;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.22);
+  transform: translateY(18px) scale(0.97);
+  transition: transform 0.22s ease;
+  overflow: hidden;
+  position: relative;
+}
+.cal-modal-overlay.is-open .cal-modal {
+  transform: translateY(0) scale(1);
+}
+
+/* Шапка модального окна — цвет категории */
+.cal-modal-header {
+  padding: 24px 28px 20px;
+  background: var(--modal-cat-bg, #edf3f7);
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+.cal-modal-cat {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--modal-cat-color, var(--primary));
+  margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.cal-modal-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  color: var(--primary-dark);
+  margin: 0 40px 0 0;
+  line-height: 1.3;
+}
+.cal-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--muted);
+  line-height: 1;
+  padding: 4px 8px;
+  border-radius: 8px;
+  transition: background 0.15s, color 0.15s;
+}
+.cal-modal-close:hover {
+  background: rgba(0,0,0,0.06);
+  color: var(--primary-dark);
+}
+
+/* Тело модального окна */
+.cal-modal-body {
+  padding: 24px 28px 28px;
+}
+.cal-modal-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.cal-modal-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 8px;
+  align-items: baseline;
+}
+.cal-modal-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+.cal-modal-value {
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+.cal-modal-value.is-main {
+  font-weight: 600;
+  color: var(--primary-dark);
+  font-size: 0.95rem;
+}
+.cal-modal-highlight-note {
+  margin-top: 18px;
+  padding: 12px 16px;
+  background: #fdf6ea;
+  border-left: 3px solid var(--gold);
+  border-radius: 0 8px 8px 0;
+  font-size: 0.82rem;
+  color: var(--primary-dark);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* ── Фильтр скрытых карточек ──────────────────────────────*/
+.cal-event-card.cal-hidden {
+  display: none;
+}
+
+/* ── Пустое состояние ────────────────────────────────────── */
+.cal-empty {
+  text-align: center;
+  padding: 48px 20px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.cal-empty::before {
+  content: "✝";
+  display: block;
+  font-size: 2rem;
+  color: var(--gold);
+  opacity: 0.5;
+  margin-bottom: 12px;
+}
+
+/* ── Адаптивность ────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .cal-month-nav {
+    gap: 6px;
+  }
+  .cal-month-btn {
+    padding: 6px 11px;
+    font-size: 0.78rem;
+  }
+  .cal-highlights {
+    padding: 20px 20px;
+  }
+  .cal-events-grid {
+    grid-template-columns: 1fr;
+  }
+  .cal-recurring-grid {
+    grid-template-columns: 1fr;
+  }
+  .cal-modal {
+    border-radius: 16px;
+  }
+  .cal-modal-header {
+    padding: 20px 20px 16px;
+  }
+  .cal-modal-body {
+    padding: 18px 20px 22px;
+  }
+  .cal-modal-row {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+  .cal-modal-label {
+    font-size: 0.7rem;
+  }
+  .cal-modal-title {
+    font-size: 1.2rem;
+  }
+  .cal-highlights-list {
+    flex-direction: column;
+  }
+  .cal-highlights-list li {
+    max-width: 100%;
+  }
+  .cal-legend {
+    gap: 7px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cal-month-nav {
+    gap: 5px;
+  }
+  .cal-month-btn {
+    padding: 5px 9px;
+    font-size: 0.74rem;
+  }
+}

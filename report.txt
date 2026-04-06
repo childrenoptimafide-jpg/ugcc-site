@@ -1,0 +1,427 @@
+=== FILE STRUCTURE ===
+./.wrangler/cache/wrangler-account.json
+./altar-servers-formation.jpeg
+./api/prayer-intention.js
+./apply-prayer-patch.js
+./baptism.jpeg
+./biblia.jpeg
+./blessing-water.jpeg
+./calendar.jpeg
+./catechesis.jpeg
+./catolicmd.jpeg
+./church-interior.jpeg
+./diocesan-pastoral-council.jpeg
+./ecumenical-meeting-moldova.jpeg
+./embassy-of-ukraine-prayer.jpeg
+./events-2026.js
+./faith-life.jpeg
+./fr-igor-plevschi.jpeg
+./fr-igor.jpeg
+./functions/prayer-intention.js
+./gallery-2.jpeg
+./gallery-6.jpeg
+./index.html
+./istoria.jpeg
+./istoria_1.jpeg
+./istoria_main.jpeg
+./marriage.jpeg
+./MyCollages.jpg
+./planner-2026.css
+./planner-2026.js
+./prayer-intention.css
+./prayer-intention.js
+./rehabilitation-program-presentation.jpeg
+./robots.txt
+./script.js
+./service.jpeg
+./sitemap.xml
+./student-lecture-usm.jpeg
+./style.css
+./sunday-liturgy.jpeg
+./test-write.txt
+./toghether.jpeg
+./vaticannews.jpeg
+./_worker.js
+
+=== HTML CHECK ===
+./apply-prayer-patch.js:const cssLink = '<link rel="stylesheet" href="prayer-intention.css" />';
+./apply-prayer-patch.js:const jsScript = '<script src="prayer-intention.js"></script>';
+./apply-prayer-patch.js:  html = html.replace(/<script[^>]*functionsprayer-intention\.js[^>]*><\/script>\n?/g, '');
+./index.html:  <link rel="canonical" href="https://ugcc-moldova2026.pages.dev/" />
+./index.html:  <link rel="alternate" hreflang="uk"      href="https://ugcc-moldova2026.pages.dev/" />
+./index.html:  <link rel="alternate" hreflang="en"      href="https://ugcc-moldova2026.pages.dev/" />
+./index.html:  <link rel="alternate" hreflang="ru"      href="https://ugcc-moldova2026.pages.dev/" />
+./index.html:  <link rel="alternate" hreflang="x-default" href="https://ugcc-moldova2026.pages.dev/" />
+./index.html:  <link rel="preconnect" href="https://fonts.googleapis.com" />
+./index.html:  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+./index.html:  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+./index.html:  <link rel="stylesheet" href="style.css" />
+./index.html:  <link rel="stylesheet" href="planner-2026.css" />
+./index.html:  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%234e3b22'/%3E%3Crect x='14' y='4' width='4' height='24' fill='%23b99252'/%3E%3Crect x='6' y='11' width='20' height='4' fill='%23b99252'/%3E%3Crect x='10' y='21' width='12' height='3' rx='1' fill='%23b99252'/%3E%3C/svg%3E" type="image/svg+xml" />
+./index.html:  <script type="application/ld+json">
+./index.html:  <link rel="stylesheet" href="prayer-intention.css" />
+./index.html:        <img src="church-interior.jpeg" alt="Інтер'єр парафіяльного храму Успіння Пресвятої Богородиці у Кишиневі" class="hero-img" fetchpriority="high" width="1920" height="1080" />
+./index.html:              <img src="istoria.jpeg" alt="History of the parish" loading="lazy" width="520" height="700" />
+./index.html:            <img src="toghether.jpeg" alt="Спільнота греко-католицької парафії Успіння у Кишиневі" loading="lazy" width="600" height="450" />
+./index.html:            <img src="fr-igor-plevschi.jpeg" alt="о. Ігор Плевський — настоятель греко-католицької парафії Успіння у Кишиневі" loading="lazy" width="500" height="600" />
+./index.html:            <img src="biblia.jpeg" alt="Святе Письмо" class="resource-img" loading="lazy" width="400" height="250" />
+./index.html:            <img src="calendar.jpeg" alt="Церковний календар УГКЦ" class="resource-img" loading="lazy" width="400" height="250" />
+./index.html:            <img src="vaticannews.jpeg" alt="Vatican News" class="resource-img" loading="lazy" width="400" height="250" />
+./index.html:            <img src="catolicmd.jpeg" alt="Католицька Церква в Молдові" class="resource-img" loading="lazy" width="400" height="250" />
+./index.html:              <img src="sunday-liturgy.jpeg" alt="Божественна Літургія" loading="lazy" width="500" height="380" />
+./index.html:              <img src="church-interior.jpeg" alt="Вечірня" loading="lazy" width="500" height="380" />
+./index.html:              <img src="faith-life.jpeg" alt="Утреня" loading="lazy" width="500" height="380" />
+./index.html:              <img src="catechesis.jpeg" alt="Катехизація" loading="lazy" width="500" height="380" />
+./index.html:              <img src="altar-servers-formation.jpeg" alt="Міністранти" loading="lazy" width="500" height="380" />
+./index.html:              <img src="ecumenical-meeting-moldova.jpeg" alt="Екуменічна зустріч" loading="lazy" width="500" height="380" />
+./index.html:              <img src="embassy-of-ukraine-prayer.jpeg" alt="Молитва за мир" loading="lazy" width="500" height="380" />
+./index.html:              <img src="rehabilitation-program-presentation.jpeg" alt="Соціальне служіння" loading="lazy" width="500" height="380" />
+./index.html:              <img src="student-lecture-usm.jpeg" alt="Молодіжні зустрічі" loading="lazy" width="500" height="380" />
+./index.html:            <img src="church-interior.jpeg" alt="Інтер'єр храму — світло і молитва" loading="lazy" width="400" height="300" />
+./index.html:            <img src="toghether.jpeg" alt="Єдність парафіяльної спільноти" loading="lazy" width="400" height="300" />
+./index.html:            <img src="sunday-liturgy.jpeg" alt="Недільна Літургія" loading="lazy" width="400" height="300" />
+./index.html:            <img src="baptism.jpeg" alt="Таїнство Хрещення" loading="lazy" width="400" height="300" />
+./index.html:            <img src="marriage.jpeg" alt="Таїнство Подружжя" loading="lazy" width="400" height="300" />
+./index.html:            <img src="catechesis.jpeg" alt="Катехизація" loading="lazy" width="400" height="300" />
+./index.html:            <img src="altar-servers-formation.jpeg" alt="Міністранти" loading="lazy" width="400" height="300" />
+./index.html:            <img src="ecumenical-meeting-moldova.jpeg" alt="Екуменічна зустріч" loading="lazy" width="400" height="300" />
+./index.html:            <img src="embassy-of-ukraine-prayer.jpeg" alt="Молитва за мир в Україні" loading="lazy" width="400" height="300" />
+./index.html:            <img src="student-lecture-usm.jpeg" alt="Молодіжна зустріч" loading="lazy" width="400" height="300" />
+./index.html:            <img src="rehabilitation-program-presentation.jpeg" alt="Соціальне служіння" loading="lazy" width="400" height="300" />
+./index.html:            <img src="fr-igor-plevschi.jpeg" alt="Парафіяльна спільнота" loading="lazy" width="400" height="300" />
+./index.html:      <img id="lightbox-img" src="" alt="" />
+./index.html:  <script src="script.js"></script>
+./index.html:  <script src="events-2026.js"></script>
+./index.html:  <script src="planner-2026.js"></script>
+./index.html:  <script src="prayer-intention.js"></script>
+
+=== ERRORS (JS) ===
+./api/prayer-intention.js:    return res.status(405).json({ ok: false, error: 'Method not allowed' });
+./api/prayer-intention.js:    return res.status(500).json({ ok: false, error: 'Missing TELEGRAM_BOT_TOKEN' });
+./api/prayer-intention.js:    return res.status(500).json({ ok: false, error: 'Missing TELEGRAM_CHAT_ID' });
+./api/prayer-intention.js:      return res.status(400).json({ ok: false, error: 'Нет текста намерения' });
+./api/prayer-intention.js:        error: telegramData.description || 'Telegram API error',
+./api/prayer-intention.js:    return res.status(500).json({ ok: false, error: e.message });
+./apply-prayer-patch.js:  console.error('❌ index.html не найден в:', __dirname);
+./events-2026.js:    dateISO: null,
+./events-2026.js:    dateISO: null,
+./events-2026.js:    time: null,
+./events-2026.js:    dateISO: null,
+./events-2026.js:    time: null,
+./events-2026.js:    time: null,
+./events-2026.js:    dateISO: null,
+./events-2026.js:    time: null,
+./events-2026.js:    dateISO: null,
+./events-2026.js:    time: null,
+./events-2026.js:    dateISO: null,
+./events-2026.js:    time: null,
+./events-2026.js:    dateISO: null,
+./events-2026.js:    time: null,
+./events-2026.js:    time: null,
+./events-2026.js:    time: null,
+./events-2026.js:    dateISO: null,
+./events-2026.js:    time: null,
+./events-2026.js:    dateISO: null,
+./events-2026.js:    time: null,
+./events-2026.js:    dateISO: null,
+./events-2026.js:    time: null,
+./events-2026.js:    dateISO: null,
+./events-2026.js:    time: null,
+./events-2026.js:    note: null
+./events-2026.js:    dateISO: null,
+./events-2026.js:    time: null,
+./events-2026.js:    time: null,
+./events-2026.js:    dateISO: null,
+./events-2026.js:    time: null,
+./events-2026.js:    dateISO: null,
+./events-2026.js:    time: null,
+./events-2026.js:    note: null
+./events-2026.js:    dateISO: null,
+./events-2026.js:    time: null,
+./events-2026.js:    note: null
+./events-2026.js:    dateISO: null,
+./events-2026.js:    time: null,
+./events-2026.js:    dateISO: null,
+./events-2026.js:    time: null,
+./events-2026.js:    dateISO: null,
+./events-2026.js:    time: null,
+./events-2026.js:    note: null
+./events-2026.js:    dateISO: null,
+./events-2026.js:    time: null,
+./events-2026.js:    note: null
+./events-2026.js:    dateISO: null,
+./events-2026.js:    time: null,
+./events-2026.js:    time: null,
+./events-2026.js:    time: null,
+./events-2026.js:    time: null,
+./events-2026.js:    month: null, // все месяцы
+./events-2026.js:    dateISO: null,
+./events-2026.js:    month: null,
+./events-2026.js:    dateISO: null,
+./events-2026.js:    time: null,
+./events-2026.js:    month: null,
+./events-2026.js:    dateISO: null,
+./events-2026.js:    time: null,
+./events-2026.js:    month: null,
+./events-2026.js:    dateISO: null,
+./events-2026.js:    time: null,
+./events-2026.js:    month: null,
+./events-2026.js:    dateISO: null,
+./events-2026.js:    time: null,
+./events-2026.js:    month: null,
+./events-2026.js:    dateISO: null,
+./events-2026.js:    time: null,
+./events-2026.js:    month: null,
+./events-2026.js:    dateISO: null,
+./events-2026.js:    time: null,
+./events-2026.js:    note: null
+./events-2026.js:    month: null,
+./events-2026.js:    dateISO: null,
+./events-2026.js:    time: null,
+./events-2026.js:    note: null
+./functions/prayer-intention.js:        error: "Missing TELEGRAM_BOT_TOKEN"
+./functions/prayer-intention.js:        error: "Missing TELEGRAM_CHAT_ID"
+./functions/prayer-intention.js:        error: "Нет текста намерения"
+./functions/prayer-intention.js:        error: telegramData.description || "Telegram API error",
+./functions/prayer-intention.js:      error: e.message
+./planner-2026.js:  let activeFilter = null;
+./planner-2026.js:        activeFilter = null;
+./planner-2026.js:    return PLANNER_EVENTS_2026.filter(e => e.month === null);
+./planner-2026.js:        activeFilter = activeFilter === cat ? null : cat;
+./prayer-intention.css:.pi-input.has-error,
+./prayer-intention.css:.pi-select.has-error,
+./prayer-intention.css:.pi-textarea.has-error {
+./prayer-intention.css:.pi-field-error {
+./prayer-intention.css:.pi-field-error.is-visible {
+./prayer-intention.css:.pi-message-error {
+./prayer-intention.js:      errorEmpty: 'Пожалуйста, напишите текст намерения.',
+./prayer-intention.js:      errorGeneral: 'Не удалось отправить. Пожалуйста, попробуйте ещё раз.',
+./prayer-intention.js:      errorEmpty: 'Будь ласка, напишіть текст намірення.',
+./prayer-intention.js:      errorGeneral: 'Не вдалося надіслати. Будь ласка, спробуйте ще раз.',
+./prayer-intention.js:      errorEmpty: 'Please enter the intention text.',
+./prayer-intention.js:      errorGeneral: 'Could not send. Please try again.',
+./prayer-intention.js:              <span class="pi-field-error" id="piIntentionError" role="alert">
+./prayer-intention.js:                ${escapeHtml(T.errorEmpty)}
+./prayer-intention.js:            <div class="pi-message pi-message-error" id="piError" role="alert">
+./prayer-intention.js:              <span id="piErrorText">${escapeHtml(T.errorGeneral)}</span>
+./prayer-intention.js:    const error = document.getElementById('piError');
+./prayer-intention.js:    if (error) error.classList.toggle('is-visible', type === 'error');
+./prayer-intention.js:    const error = document.getElementById('piError');
+./prayer-intention.js:    if (error) error.classList.remove('is-visible');
+./prayer-intention.js:    const errorText = document.getElementById('piErrorText');
+./prayer-intention.js:    if (errorText) {
+./prayer-intention.js:      errorText.textContent = msg || getTexts().errorGeneral;
+./prayer-intention.js:    if (intention) intention.classList.remove('has-error');
+./prayer-intention.js:    const errorEl = document.getElementById('piIntentionError');
+./prayer-intention.js:    if (!intentionEl || !errorEl || !submitBtn) return;
+./prayer-intention.js:      intentionEl.classList.add('has-error');
+./prayer-intention.js:      errorEl.classList.add('is-visible');
+./prayer-intention.js:    intentionEl.classList.remove('has-error');
+./prayer-intention.js:    errorEl.classList.remove('is-visible');
+./prayer-intention.js:        setErrorText(data.error || T.errorGeneral);
+./prayer-intention.js:        showMessage('error');
+./prayer-intention.js:      setErrorText(T.errorGeneral);
+./prayer-intention.js:      showMessage('error');
+./prayer-intention.js:        this.classList.remove('has-error');
+./_worker.js:        error: "Missing TELEGRAM_BOT_TOKEN"
+./_worker.js:        error: "Missing TELEGRAM_CHAT_ID"
+./_worker.js:        error: "\u041D\u0435\u0442 \u0442\u0435\u043A\u0441\u0442\u0430 \u043D\u0430\u043C\u0435\u0440\u0435\u043D\u0438\u044F"
+./_worker.js:        error: telegramData.description || "Telegram API error",
+./_worker.js:      error: e.message
+./_worker.js:    var params = /* @__PURE__ */ Object.create(null);
+./_worker.js:            if (typeof value !== "object" || value === null) {
+./_worker.js:    } catch (error) {
+./_worker.js:      throw error;
+./_worker.js:  // https://fetch.spec.whatwg.org/#null-body-status
+./_worker.js:    [101, 204, 205, 304].includes(response.status) ? null : response.body,
+
+=== DOM USAGE ===
+./index.html:      <button class="burger" id="burgerBtn" onclick="toggleNav(); this.setAttribute('aria-expanded', document.getElementById('mainNav').classList.contains('active'))" aria-label="Меню" aria-expanded="false" aria-controls="mainNav">
+./planner-2026.js:    const nav = document.getElementById('calMonthNav');
+./planner-2026.js:    const box = document.getElementById('calHighlights');
+./planner-2026.js:    box.querySelectorAll('li[data-event-id]').forEach(li => {
+./planner-2026.js:    const legend = document.getElementById('calLegend');
+./planner-2026.js:    legend.querySelectorAll('.cal-legend-item').forEach(btn => {
+./planner-2026.js:    const grid = document.getElementById('calEventsGrid');
+./planner-2026.js:    const section = document.getElementById('calRecurringSection');
+./planner-2026.js:    section.querySelectorAll('.cal-rec-item').forEach(item => {
+./planner-2026.js:    const overlay = document.getElementById('calModalOverlay');
+./planner-2026.js:    const modal = overlay.querySelector('.cal-modal');
+./planner-2026.js:    modal.querySelector('.cal-modal-cat').innerHTML =
+./planner-2026.js:    modal.querySelector('.cal-modal-title').textContent = t(ev.title, currentLang);
+./planner-2026.js:    const body = modal.querySelector('.cal-modal-rows');
+./planner-2026.js:    modal.querySelector('.cal-modal-close').focus();
+./planner-2026.js:    const overlay = document.getElementById('calModalOverlay');
+./planner-2026.js:    const titleEl = document.getElementById('calMonthTitle');
+./planner-2026.js:    const subtitleEl = document.getElementById('calMonthSubtitle');
+./planner-2026.js:    if (!document.getElementById('calendar-2026')) return;
+./planner-2026.js:    const overlay = document.getElementById('calModalOverlay');
+./planner-2026.js:      overlay.querySelector('.cal-modal-close').addEventListener('click', closeModal);
+./planner-2026.js:    document.querySelectorAll('.lang-btn').forEach(btn => {
+./prayer-intention.js:    if (document.getElementById('prayer-intention-section')) return;
+./prayer-intention.js:    if (document.getElementById('piOverlay')) return;
+./prayer-intention.js:    const anchor = document.getElementById('donate')
+./prayer-intention.js:      || document.getElementById('contacts')
+./prayer-intention.js:      || document.querySelector('main')
+./prayer-intention.js:    const oldSection = document.getElementById('prayer-intention-section');
+./prayer-intention.js:    const oldOverlay = document.getElementById('piOverlay');
+./prayer-intention.js:    const overlay = document.getElementById('piOverlay');
+./prayer-intention.js:      const first = overlay.querySelector('#piName');
+./prayer-intention.js:    const overlay = document.getElementById('piOverlay');
+./prayer-intention.js:    const label = btn.querySelector('.pi-btn-label');
+./prayer-intention.js:    const success = document.getElementById('piSuccess');
+./prayer-intention.js:    const error = document.getElementById('piError');
+./prayer-intention.js:    const success = document.getElementById('piSuccess');
+./prayer-intention.js:    const error = document.getElementById('piError');
+./prayer-intention.js:    const errorText = document.getElementById('piErrorText');
+./prayer-intention.js:    const form = document.getElementById('piForm');
+./prayer-intention.js:    const intention = document.getElementById('piIntention');
+./prayer-intention.js:    const intentionError = document.getElementById('piIntentionError');
+./prayer-intention.js:    const form = document.getElementById('piForm');
+./prayer-intention.js:    form.querySelectorAll('.pi-field, .pi-submit-btn').forEach(el => {
+./prayer-intention.js:    const intentionEl = document.getElementById('piIntention');
+./prayer-intention.js:    const errorEl = document.getElementById('piIntentionError');
+./prayer-intention.js:    const submitBtn = document.getElementById('piSubmitBtn');
+./prayer-intention.js:    const name = (document.getElementById('piName')?.value || '').trim();
+./prayer-intention.js:    const category = document.getElementById('piCategory')?.value || '';
+./prayer-intention.js:    const contact = (document.getElementById('piContact')?.value || '').trim();
+./prayer-intention.js:    document.getElementById('piOpenBtn')?.addEventListener('click', openModal);
+./prayer-intention.js:    document.getElementById('piCloseBtn')?.addEventListener('click', closeModal);
+./prayer-intention.js:    document.getElementById('piOverlay')?.addEventListener('click', function (e) {
+./prayer-intention.js:      const overlay = document.getElementById('piOverlay');
+./prayer-intention.js:    document.getElementById('piForm')?.addEventListener('submit', handleSubmit);
+./prayer-intention.js:    document.getElementById('piIntention')?.addEventListener('input', function () {
+./prayer-intention.js:        document.getElementById('piIntentionError')?.classList.remove('is-visible');
+./prayer-intention.js:    document.querySelectorAll('.lang-btn').forEach(btn => {
+./script.js:  document.querySelectorAll('[data-key]').forEach(el => {
+./script.js:  document.querySelectorAll('.lang-btn').forEach(btn => {
+./script.js:  document.querySelectorAll('.gallery-item').forEach(item => {
+./script.js:      item.querySelector('.gallery-caption').innerText = item.dataset[lang];
+./script.js:  const candleWrap = document.getElementById('candleWrap');
+./script.js:  const candleLabel = document.getElementById('candleLabel');
+./script.js:  document.getElementById('mainNav').classList.toggle('active');
+./script.js:  document.getElementById('mainNav').classList.remove('active');
+./script.js:  const btn = document.getElementById('burgerBtn');
+./script.js:  const card = document.querySelector(`[data-card="${cardId}"]`);
+./script.js:  const trigger = card.querySelector('.prayer-card-trigger');
+./script.js:  const textContainer = document.getElementById(`text-${cardId}`);
+./script.js:  const el = document.getElementById(elementId);
+./script.js:  const panel = document.getElementById('swiftPanel');
+./script.js:  const btn   = document.getElementById('swiftToggleBtn');
+./script.js:  const wrap = document.getElementById('candleWrap');
+./script.js:  const label = document.getElementById('candleLabel');
+./script.js:    const wrap = document.querySelector('#hero .hero-image-wrap');
+./script.js:  const lightbox       = document.getElementById('lightbox');
+./script.js:  const lightboxImg    = document.getElementById('lightbox-img');
+./script.js:  const lightboxCaption = document.getElementById('lightbox-caption');
+./script.js:  document.querySelectorAll('.gallery-item').forEach(item => {
+./script.js:      lightboxCaption.innerText = item.dataset[currentLang] || item.querySelector('.gallery-caption').innerText;
+./script.js:  document.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+./script.js:  document.querySelectorAll('.history-prose-text, .history-prose-image').forEach(el => {
+
+=== POSSIBLE PATHS ===
+./apply-prayer-patch.js:const cssLink = '<link rel="stylesheet" href="prayer-intention.css" />';
+./apply-prayer-patch.js:const jsScript = '<script src="prayer-intention.js"></script>';
+./apply-prayer-patch.js:      /(<a href="#donate"[^>]*data-key="navDonate"[^>]*>)/,
+./apply-prayer-patch.js:      `<a href="#prayer-intention-section" onclick="closeNav()">Намерение</a>\n        $1`
+./index.html:  <link rel="canonical" href="https://ugcc-moldova2026.pages.dev/" />
+./index.html:  <link rel="alternate" hreflang="uk"      href="https://ugcc-moldova2026.pages.dev/" />
+./index.html:  <link rel="alternate" hreflang="en"      href="https://ugcc-moldova2026.pages.dev/" />
+./index.html:  <link rel="alternate" hreflang="ru"      href="https://ugcc-moldova2026.pages.dev/" />
+./index.html:  <link rel="alternate" hreflang="x-default" href="https://ugcc-moldova2026.pages.dev/" />
+./index.html:  <link rel="preconnect" href="https://fonts.googleapis.com" />
+./index.html:  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+./index.html:  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+./index.html:  <link rel="stylesheet" href="style.css" />
+./index.html:  <link rel="stylesheet" href="planner-2026.css" />
+./index.html:  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%234e3b22'/%3E%3Crect x='14' y='4' width='4' height='24' fill='%23b99252'/%3E%3Crect x='6' y='11' width='20' height='4' fill='%23b99252'/%3E%3Crect x='10' y='21' width='12' height='3' rx='1' fill='%23b99252'/%3E%3C/svg%3E" type="image/svg+xml" />
+./index.html:  <link rel="stylesheet" href="prayer-intention.css" />
+./index.html:      <a href="#hero" class="brand">
+./index.html:        <a href="#history"      data-key="navHistory"    onclick="closeNav()">Історія парафії</a>
+./index.html:        <a href="#about"        data-key="navAbout"      onclick="closeNav()">Про парафію</a>
+./index.html:        <a href="#priest"       data-key="navPriest"     onclick="closeNav()">Настоятель</a>
+./index.html:        <a href="#planner"      data-key="navPlanner"    onclick="closeNav()">План 2026</a>
+./index.html:        <a href="#calendar-2026" data-key="navCalendar" onclick="closeNav()">Планер</a>
+./index.html:        <a href="#prayer-cards" data-key="navPrayers"    onclick="closeNav()">Молитви</a>
+./index.html:        <a href="#resources"    data-key="navResources"  onclick="closeNav()">Ресурси</a>
+./index.html:        <a href="#sacraments"   data-key="navSacraments" onclick="closeNav()">Таїнства</a>
+./index.html:        <a href="#life"         data-key="navLife"       onclick="closeNav()">Життя парафії</a>
+./index.html:        <a href="#gallery"      data-key="navGallery"    onclick="closeNav()">Галерея</a>
+./index.html:        <a href="#schedule"     data-key="navSchedule"   onclick="closeNav()">Розклад</a>
+./index.html:        <a href="#prayer-intention-section" data-key="navIntention" onclick="closeNav()">Намерення</a>
+./index.html:        <a href="#donate"       data-key="navDonate"     onclick="closeNav()">Пожертвуйте</a>
+./index.html:        <a href="#contacts"     data-key="navContacts"   onclick="closeNav()">Контакти</a>
+./index.html:        <a href="#contacts" class="header-cta" data-key="headerCta">Зв'язатись</a>
+./index.html:      <span data-key="prayerStrip">Щоденна Літургія: <strong>09:00</strong> · Неділя: <strong>09:00</strong> & <strong>10:30</strong> · <a href="#schedule">Повний розклад</a></span>
+./index.html:        <img src="church-interior.jpeg" alt="Інтер'єр парафіяльного храму Успіння Пресвятої Богородиці у Кишиневі" class="hero-img" fetchpriority="high" width="1920" height="1080" />
+./index.html:            <a href="#about"    class="btn-primary"        data-key="heroCta">Дізнатися більше</a>
+./index.html:            <a href="#schedule" class="btn-outline-white"  data-key="heroContact">Розклад богослужінь</a>
+./index.html:              <img src="istoria.jpeg" alt="History of the parish" loading="lazy" width="520" height="700" />
+./index.html:            <img src="toghether.jpeg" alt="Спільнота греко-католицької парафії Успіння у Кишиневі" loading="lazy" width="600" height="450" />
+./index.html:            <img src="fr-igor-plevschi.jpeg" alt="о. Ігор Плевський — настоятель греко-католицької парафії Успіння у Кишиневі" loading="lazy" width="500" height="600" />
+./index.html:            <img src="biblia.jpeg" alt="Святе Письмо" class="resource-img" loading="lazy" width="400" height="250" />
+./index.html:            <a href="https://ugcc.ua/library/bible/" target="_blank" rel="noopener noreferrer" class="resource-btn" data-key="bibleBtn">Читати</a>
+./index.html:            <img src="calendar.jpeg" alt="Церковний календар УГКЦ" class="resource-img" loading="lazy" width="400" height="250" />
+./index.html:            <a href="https://prayer-service.pp.ua/#20260117&grid" target="_blank" rel="noopener noreferrer" class="resource-btn" data-key="calBtn">Відкрити</a>
+./index.html:            <img src="vaticannews.jpeg" alt="Vatican News" class="resource-img" loading="lazy" width="400" height="250" />
+./index.html:            <a href="https://www.vaticannews.va/ru.html" target="_blank" rel="noopener noreferrer" class="resource-btn" data-key="vatBtn">Відкрити</a>
+./index.html:            <img src="catolicmd.jpeg" alt="Католицька Церква в Молдові" class="resource-img" loading="lazy" width="400" height="250" />
+./index.html:            <a href="https://catolicmold.md/stiri" target="_blank" rel="noopener noreferrer" class="resource-btn" data-key="moldBtn">Відкрити</a>
+./index.html:              <img src="sunday-liturgy.jpeg" alt="Божественна Літургія" loading="lazy" width="500" height="380" />
+./index.html:              <img src="church-interior.jpeg" alt="Вечірня" loading="lazy" width="500" height="380" />
+./index.html:              <img src="faith-life.jpeg" alt="Утреня" loading="lazy" width="500" height="380" />
+./index.html:              <img src="catechesis.jpeg" alt="Катехизація" loading="lazy" width="500" height="380" />
+./index.html:              <img src="altar-servers-formation.jpeg" alt="Міністранти" loading="lazy" width="500" height="380" />
+./index.html:              <img src="ecumenical-meeting-moldova.jpeg" alt="Екуменічна зустріч" loading="lazy" width="500" height="380" />
+./index.html:              <img src="embassy-of-ukraine-prayer.jpeg" alt="Молитва за мир" loading="lazy" width="500" height="380" />
+./index.html:              <img src="rehabilitation-program-presentation.jpeg" alt="Соціальне служіння" loading="lazy" width="500" height="380" />
+./index.html:              <img src="student-lecture-usm.jpeg" alt="Молодіжні зустрічі" loading="lazy" width="500" height="380" />
+./index.html:          <div class="gallery-item" tabindex="0" role="button" data-src="church-interior.jpeg" data-ua="Світло храму і тиша молитви" data-en="The Light of the Church and the Silence of Prayer" data-ru="Свет храма и тишина молитвы">
+./index.html:            <img src="church-interior.jpeg" alt="Інтер'єр храму — світло і молитва" loading="lazy" width="400" height="300" />
+./index.html:          <div class="gallery-item" tabindex="0" role="button" data-src="toghether.jpeg" data-ua="Урочистість церковної єдності" data-en="The Solemnity of Church Unity" data-ru="Торжество церковного единства">
+./index.html:            <img src="toghether.jpeg" alt="Єдність парафіяльної спільноти" loading="lazy" width="400" height="300" />
+./index.html:          <div class="gallery-item" tabindex="0" role="button" data-src="sunday-liturgy.jpeg" data-ua="Євхаристійна радість спільноти" data-en="The Eucharistic Joy of Community" data-ru="Евхаристическая радость общины">
+./index.html:            <img src="sunday-liturgy.jpeg" alt="Недільна Літургія" loading="lazy" width="400" height="300" />
+./index.html:          <div class="gallery-item" tabindex="0" role="button" data-src="baptism.jpeg" data-ua="Нове життя у Христі" data-en="New Life in Christ" data-ru="Новая жизнь во Христе">
+./index.html:            <img src="baptism.jpeg" alt="Таїнство Хрещення" loading="lazy" width="400" height="300" />
+./index.html:          <div class="gallery-item" tabindex="0" role="button" data-src="marriage.jpeg" data-ua="Благословення родинної любові" data-en="The Blessing of Family Love" data-ru="Благословение семейной любви">
+./index.html:            <img src="marriage.jpeg" alt="Таїнство Подружжя" loading="lazy" width="400" height="300" />
+./index.html:          <div class="gallery-item" tabindex="0" role="button" data-src="catechesis.jpeg" data-ua="Навчання, що веде до віри" data-en="Learning That Leads to Faith" data-ru="Обучение, ведущее к вере">
+./index.html:            <img src="catechesis.jpeg" alt="Катехизація" loading="lazy" width="400" height="300" />
+./index.html:          <div class="gallery-item" tabindex="0" role="button" data-src="altar-servers-formation.jpeg" data-ua="Молодість у служінні Богові" data-en="Youth in Service to God" data-ru="Молодость в служении Богу">
+./index.html:            <img src="altar-servers-formation.jpeg" alt="Міністранти" loading="lazy" width="400" height="300" />
+./index.html:          <div class="gallery-item" tabindex="0" role="button" data-src="ecumenical-meeting-moldova.jpeg" data-ua="Шукати єдність у Христі" data-en="Seeking Unity in Christ" data-ru="Искать единство во Христе">
+./index.html:            <img src="ecumenical-meeting-moldova.jpeg" alt="Екуменічна зустріч" loading="lazy" width="400" height="300" />
+./index.html:          <div class="gallery-item" tabindex="0" role="button" data-src="embassy-of-ukraine-prayer.jpeg" data-ua="Молитва за народ і мир" data-en="Prayer for People and Peace" data-ru="Молитва за народ и мир">
+./index.html:            <img src="embassy-of-ukraine-prayer.jpeg" alt="Молитва за мир в Україні" loading="lazy" width="400" height="300" />
+./index.html:          <div class="gallery-item" tabindex="0" role="button" data-src="student-lecture-usm.jpeg" data-ua="Слово для нового покоління" data-en="A Word for the New Generation" data-ru="Слово для нового поколения">
+./index.html:            <img src="student-lecture-usm.jpeg" alt="Молодіжна зустріч" loading="lazy" width="400" height="300" />
+./index.html:          <div class="gallery-item" tabindex="0" role="button" data-src="rehabilitation-program-presentation.jpeg" data-ua="Милосердя, що повертає надію" data-en="Mercy That Restores Hope" data-ru="Милосердие, возвращающее надежду">
+./index.html:            <img src="rehabilitation-program-presentation.jpeg" alt="Соціальне служіння" loading="lazy" width="400" height="300" />
+./index.html:          <div class="gallery-item" tabindex="0" role="button" data-src="fr-igor-plevschi.jpeg" data-ua="Жива родина віри" data-en="A Living Family of Faith" data-ru="Живая семья веры">
+./index.html:            <img src="fr-igor-plevschi.jpeg" alt="Парафіяльна спільнота" loading="lazy" width="400" height="300" />
+./index.html:              <a href="https://catedra.ru/ordo-missae" target="_blank" rel="noopener noreferrer" class="prayer-ext-link" data-key="cardMassBtn" aria-label="Відкрити Чин Святої Меси">Відкрити →</a>
+./index.html:          <a href="https://paypal.me/DormitionParish" target="_blank" rel="noopener noreferrer" class="paypal-btn" aria-label="Пожертвуйте через PayPal">
+./index.html:            <p><a href="tel:+37378377337">+373 78 377 337</a></p>
+./index.html:            <a href="https://www.facebook.com/profile.php?id=100088945821084" target="_blank" rel="noopener noreferrer" class="fb-btn" aria-label="Facebook сторінка парафії">
+./index.html:            <iframe src="https://maps.google.com/maps?q=Mitropolit+B%C4%83nulescu-Bodoni+22,+Chi%C8%99in%C4%83u,+Moldova&z=17&output=embed" width="100%" height="400" style="border:0; border-radius:18px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Карта — Парафія Успіння, вул. Бенулеску-Бодоні 22, Кишинів"></iframe>
+./index.html:        <a href="#about"     data-key="navAbout">Про парафію</a>
+./index.html:        <a href="#priest"    data-key="navPriest">Настоятель</a>
+./index.html:        <a href="#planner"   data-key="navPlanner">План 2026</a>
+./index.html:        <a href="#resources" data-key="navResources">Ресурси</a>
+./index.html:        <a href="#gallery"   data-key="navGallery">Галерея</a>
+./index.html:        <a href="#schedule"  data-key="navSchedule">Розклад</a>
+./index.html:        <a href="#donate"    data-key="navDonate">Пожертвуйте</a>
+./index.html:        <a href="#contacts"  data-key="navContacts">Контакти</a>
+./index.html:      <img id="lightbox-img" src="" alt="" />
+./index.html:  <script src="script.js"></script>
+./index.html:  <script src="events-2026.js"></script>
+./index.html:  <script src="planner-2026.js"></script>
+./index.html:  <script src="prayer-intention.js"></script>
+./script.js:    prayerStrip: "Щоденна Літургія: <strong>09:00</strong> · Неділя: <strong>09:00</strong> & <strong>10:30</strong> · <a href=\"#schedule\">Повний розклад</a>",
+./script.js:    prayerStrip: "Daily Liturgy: <strong>09:00</strong> · Sunday: <strong>09:00</strong> & <strong>10:30</strong> · <a href=\"#schedule\">Full schedule</a>",
+./script.js:    prayerStrip: "Ежедневная Литургия: <strong>09:00</strong> · Воскресенье: <strong>09:00</strong> & <strong>10:30</strong> · <a href=\"#schedule\">Полное расписание</a>",
+./sitemap.xml:    <xhtml:link rel="alternate" hreflang="uk"        href="https://ugcc-moldova2026.pages.dev/"/>
+./sitemap.xml:    <xhtml:link rel="alternate" hreflang="en"        href="https://ugcc-moldova2026.pages.dev/"/>
+./sitemap.xml:    <xhtml:link rel="alternate" hreflang="ru"        href="https://ugcc-moldova2026.pages.dev/"/>
+./sitemap.xml:    <xhtml:link rel="alternate" hreflang="x-default" href="https://ugcc-moldova2026.pages.dev/"/>

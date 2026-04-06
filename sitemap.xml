@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://ugcc-moldova2026.pages.dev/</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <!-- Multilingual alternates for the single-page site -->
+    <xhtml:link rel="alternate" hreflang="uk"        href="https://ugcc-moldova2026.pages.dev/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://ugcc-moldova2026.pages.dev/"/>
+    <xhtml:link rel="alternate" hreflang="ru"        href="https://ugcc-moldova2026.pages.dev/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ugcc-moldova2026.pages.dev/"/>
+  </url>
+</urlset>

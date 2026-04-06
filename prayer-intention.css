@@ -1,0 +1,403 @@
+/* ============================================================
+   КАРТОЧКА «МОЛИТВЕННОЕ НАМЕРЕНИЕ»
+   Приход Успения Пресвятой Богородицы · Кишинёв
+   Церковный, спокойный стиль · Адаптивный
+   ============================================================ */
+
+/* ── Секция ─────────────────────────────────────────────────── */
+#prayer-intention-section {
+  background: #faf8f4;
+  border-top: 3px solid var(--gold, #b99252);
+}
+
+/* ── Карточка ──────────────────────────────────────────────── */
+.pi-card {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid rgba(185, 146, 82, 0.25);
+  box-shadow: 0 8px 32px rgba(30, 45, 60, 0.08);
+  padding: 44px 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Тонкая золотая полоска вверху карточки */
+.pi-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold, #b99252), transparent);
+}
+
+.pi-card-icon {
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 16px;
+  opacity: 0.85;
+  line-height: 1;
+}
+
+.pi-card-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.55rem;
+  color: var(--primary-dark, #3f5a6b);
+  margin: 0 0 14px;
+  line-height: 1.25;
+}
+
+.pi-card-text {
+  font-size: 0.95rem;
+  color: var(--muted, #5f6b7a);
+  line-height: 1.7;
+  margin: 0 0 28px;
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pi-card-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary-dark, #3f5a6b);
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 13px 30px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.18s, box-shadow 0.25s;
+  box-shadow: 0 4px 16px rgba(63, 90, 107, 0.3);
+  letter-spacing: 0.3px;
+}
+
+.pi-card-btn:hover {
+  background: var(--primary, #5a7a8f);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(63, 90, 107, 0.35);
+}
+
+.pi-card-btn:active {
+  transform: translateY(0);
+}
+
+/* ── Модальное окно ─────────────────────────────────────────── */
+.pi-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 25, 35, 0.68);
+  z-index: 2200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.24s ease;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.pi-overlay.is-open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.pi-modal {
+  background: #fff;
+  border-radius: 22px;
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 24px 72px rgba(0, 0, 0, 0.2);
+  transform: translateY(22px) scale(0.97);
+  transition: transform 0.24s ease;
+  overscroll-behavior: contain;
+}
+
+.pi-overlay.is-open .pi-modal {
+  transform: translateY(0) scale(1);
+}
+
+/* Шапка модала */
+.pi-modal-header {
+  padding: 26px 28px 20px;
+  border-bottom: 1px solid var(--line, #d1d9e0);
+  position: relative;
+  background: linear-gradient(135deg, #f8f6f2 0%, #faf9f6 100%);
+  border-radius: 22px 22px 0 0;
+}
+
+.pi-modal-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--gold, #b99252);
+  margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pi-modal-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  color: var(--primary-dark, #3f5a6b);
+  margin: 0 40px 0 0;
+  line-height: 1.3;
+}
+
+.pi-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 34px;
+  height: 34px;
+  background: rgba(0, 0, 0, 0.06);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.05rem;
+  color: var(--muted, #5f6b7a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s, color 0.18s;
+  line-height: 1;
+}
+
+.pi-modal-close:hover {
+  background: rgba(0, 0, 0, 0.12);
+  color: var(--primary-dark, #3f5a6b);
+}
+
+/* Тело модала */
+.pi-modal-body {
+  padding: 24px 28px 28px;
+}
+
+/* ── Форма ──────────────────────────────────────────────────── */
+.pi-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.pi-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pi-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--muted, #5f6b7a);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pi-label .pi-required {
+  color: #c0392b;
+  font-size: 0.9rem;
+}
+
+.pi-input,
+.pi-select,
+.pi-textarea {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  color: var(--text, #2d3748);
+  background: #f8f9fb;
+  border: 1.5px solid var(--line, #d1d9e0);
+  border-radius: 10px;
+  padding: 11px 14px;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.pi-input:focus,
+.pi-select:focus,
+.pi-textarea:focus {
+  border-color: var(--primary, #5a7a8f);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(90, 122, 143, 0.12);
+}
+
+.pi-input.has-error,
+.pi-select.has-error,
+.pi-textarea.has-error {
+  border-color: #e74c3c;
+  background: #fff8f7;
+}
+
+.pi-textarea {
+  resize: vertical;
+  min-height: 100px;
+  line-height: 1.6;
+}
+
+.pi-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235f6b7a' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+/* Сообщение об ошибке поля */
+.pi-field-error {
+  font-size: 0.77rem;
+  color: #e74c3c;
+  display: none;
+  margin-top: 2px;
+}
+
+.pi-field-error.is-visible {
+  display: block;
+}
+
+/* Кнопка отправки */
+.pi-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--primary-dark, #3f5a6b);
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 14px 24px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.18s, opacity 0.2s;
+  box-shadow: 0 4px 18px rgba(63, 90, 107, 0.28);
+  margin-top: 4px;
+  letter-spacing: 0.3px;
+}
+
+.pi-submit-btn:hover:not(:disabled) {
+  background: var(--primary, #5a7a8f);
+  transform: translateY(-1px);
+  box-shadow: 0 7px 22px rgba(63, 90, 107, 0.32);
+}
+
+.pi-submit-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Спиннер загрузки */
+.pi-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2.5px solid rgba(255,255,255,0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: pi-spin 0.7s linear infinite;
+  flex-shrink: 0;
+  display: none;
+}
+
+.pi-submit-btn.is-loading .pi-spinner {
+  display: block;
+}
+
+.pi-submit-btn.is-loading .pi-btn-label {
+  opacity: 0.8;
+}
+
+@keyframes pi-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Сообщения после отправки */
+.pi-message {
+  display: none;
+  padding: 16px 18px;
+  border-radius: 12px;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  margin-top: 4px;
+}
+
+.pi-message.is-visible {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.pi-message-success {
+  background: #f0faf4;
+  border: 1px solid #a8d5b5;
+  color: #1e6b3e;
+}
+
+.pi-message-error {
+  background: #fff5f5;
+  border: 1px solid #f5c6c6;
+  color: #c0392b;
+}
+
+.pi-message-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ── Адаптивность ───────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .pi-card {
+    padding: 32px 24px;
+  }
+
+  .pi-modal {
+    border-radius: 18px 18px 0 0;
+    max-height: 95vh;
+  }
+
+  .pi-overlay {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .pi-modal-header {
+    border-radius: 18px 18px 0 0;
+    padding: 22px 22px 18px;
+  }
+
+  .pi-modal-body {
+    padding: 20px 22px 28px;
+  }
+
+  .pi-modal-title {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .pi-card {
+    padding: 28px 18px;
+  }
+
+  .pi-card-title {
+    font-size: 1.3rem;
+  }
+}
