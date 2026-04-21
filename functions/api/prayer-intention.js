@@ -50,7 +50,7 @@ export async function onRequestPost({ request, env }) {
 
     // Валидация
     const intention = sanitize(data.intention, 3000);
-    if (!intention || intention.length < 5) {
+    if (!intention || intention.length < 3) {
       return json({ ok: false, error: "intention_required" }, 400);
     }
 

@@ -136,7 +136,7 @@ const T = {
     intentSuccess: "Дякуємо! Ваше намірення отримано. Ми будемо молитися за вас.",
     intentError: "Не вдалося надіслати. Спробуйте ще раз або зателефонуйте: +373 78 377 337.",
     intentErrEmpty: "Будь ласка, напишіть ваше намірення.",
-    intentErrShort: "Намірення занадто коротке. Напишіть, будь ласка, детальніше.",
+    intentErrShort: "Намірення занадто коротке. Напишіть, будь ласка, хоча б кілька літер.",
 
     morningPrayerText: `<h4>Ранкові молитви</h4>
 <p><em>Отче наш... Радуйся Маріє...</em></p>
@@ -344,7 +344,7 @@ const T = {
     intentSuccess: "Thank you! Your intention has been received. We will pray for you.",
     intentError: "Could not send. Please try again or call us: +373 78 377 337.",
     intentErrEmpty: "Please write your intention.",
-    intentErrShort: "The intention is too short. Please write a little more detail.",
+    intentErrShort: "The intention is too short. Please enter at least a few letters.",
 
     morningPrayerText: `<h4>Morning Prayers</h4>
 <p><em>Our Father... Hail Mary...</em></p>
@@ -552,7 +552,7 @@ const T = {
     intentSuccess: "Спасибо! Ваше намерение принято. Мы будем молиться за вас.",
     intentError: "Не удалось отправить. Попробуйте ещё раз или позвоните: +373 78 377 337.",
     intentErrEmpty: "Пожалуйста, напишите ваше намерение.",
-    intentErrShort: "Намерение слишком короткое. Напишите, пожалуйста, подробнее.",
+    intentErrShort: "Намерение слишком короткое. Напишите, пожалуйста, хотя бы несколько букв.",
 
     morningPrayerText: `<h4>Утренние молитвы</h4>
 <p><em>Отче наш... Радуйся Мария...</em></p>
@@ -901,8 +901,8 @@ function initIntentionForm() {
       form.intention.focus();
       return;
     }
-    if (intention.length < 5) {
-      setStatus(t('intentErrShort', 'Намірення занадто коротке.'), 'error');
+    if (intention.length < 3) {
+      setStatus(t('intentErrShort', 'Намірення занадто коротке. Напишіть, будь ласка, хоча б кілька літер.'), 'error');
       form.intention.focus();
       return;
     }
