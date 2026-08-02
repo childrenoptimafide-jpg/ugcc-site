@@ -11,6 +11,7 @@ const T = {
     navAbout: "Про парафію",
     navPriest: "Настоятель",
     navPlanner: "План 2026",
+    navCalendar: "Планер",
     navPrayers: "Молитви",
     navResources: "Ресурси",
     navSacraments: "Таїнства",
@@ -219,6 +220,7 @@ const T = {
     navAbout: "About Us",
     navPriest: "Priest",
     navPlanner: "Plan 2026",
+    navCalendar: "Planner",
     navPrayers: "Prayers",
     navResources: "Resources",
     navSacraments: "Sacraments",
@@ -427,6 +429,7 @@ const T = {
     navAbout: "О приходе",
     navPriest: "Настоятель",
     navPlanner: "План 2026",
+    navCalendar: "Планировщик",
     navPrayers: "Молитвы",
     navResources: "Ресурсы",
     navSacraments: "Таинства",
@@ -652,7 +655,10 @@ function setLanguage(lang) {
 
   // Обновление активных кнопок языка
   document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.id === 'langBtn' + lang.toUpperCase());
+    const btnLang = btn.dataset.lang || btn.id.replace('langBtn', '').toLowerCase();
+    const isActive = btnLang === lang;
+    btn.classList.toggle('active', isActive);
+    btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
   });
 
   // Правильный lang-атрибут для <html>

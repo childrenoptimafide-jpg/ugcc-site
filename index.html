@@ -39,7 +39,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=20260421-1" />
+  <link rel="stylesheet" href="style.css?v=20260802-4" />
   <link rel="stylesheet" href="planner-2026.css?v=20260421-1" />
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%234e3b22'/%3E%3Crect x='14' y='4' width='4' height='24' fill='%23b99252'/%3E%3Crect x='6' y='11' width='20' height='4' fill='%23b99252'/%3E%3Crect x='10' y='21' width='12' height='3' rx='1' fill='%23b99252'/%3E%3C/svg%3E" type="image/svg+xml" />
@@ -99,11 +99,16 @@
       </button>
 
       <nav class="main-nav" id="mainNav" aria-label="Головна навігація">
+        <div class="mobile-lang-switcher" role="group" aria-label="Мова сайту">
+          <button class="lang-btn active" data-lang="ua" onclick="setLanguage('ua')" aria-label="Українська">UA</button>
+          <button class="lang-btn" data-lang="en" onclick="setLanguage('en')" aria-label="English">EN</button>
+          <button class="lang-btn" data-lang="ru" onclick="setLanguage('ru')" aria-label="Русский">RU</button>
+        </div>
         <a href="#history"      data-key="navHistory"    onclick="closeNav()">Історія парафії</a>
         <a href="#about"        data-key="navAbout"      onclick="closeNav()">Про парафію</a>
         <a href="#priest"       data-key="navPriest"     onclick="closeNav()">Настоятель</a>
         <a href="#planner"      data-key="navPlanner"    onclick="closeNav()">План 2026</a>
-        <a href="#calendar-2026" onclick="closeNav()">Планер</a>
+        <a href="#calendar-2026" data-key="navCalendar" onclick="closeNav()">Планер</a>
         <a href="#prayer-cards" data-key="navPrayers"    onclick="closeNav()">Молитви</a>
         <a href="#resources"    data-key="navResources"  onclick="closeNav()">Ресурси</a>
         <a href="#sacraments"   data-key="navSacraments" onclick="closeNav()">Таїнства</a>
@@ -116,9 +121,9 @@
 
       <div class="header-right">
         <div class="lang-switcher" role="group" aria-label="Мова сайту">
-          <button id="langBtnUA" class="lang-btn active" onclick="setLanguage('ua')" aria-label="Українська">UA</button>
-          <button id="langBtnEN" class="lang-btn"        onclick="setLanguage('en')" aria-label="English">EN</button>
-          <button id="langBtnRU" class="lang-btn"        onclick="setLanguage('ru')" aria-label="Русский">RU</button>
+          <button id="langBtnUA" class="lang-btn active" data-lang="ua" onclick="setLanguage('ua')" aria-label="Українська">UA</button>
+          <button id="langBtnEN" class="lang-btn" data-lang="en" onclick="setLanguage('en')" aria-label="English">EN</button>
+          <button id="langBtnRU" class="lang-btn" data-lang="ru" onclick="setLanguage('ru')" aria-label="Русский">RU</button>
         </div>
         <a href="#contacts" class="header-cta" data-key="headerCta">Зв'язатись</a>
       </div>
@@ -838,12 +843,12 @@
     <div class="lightbox-backdrop"></div>
     <div class="lightbox-content">
       <button class="lightbox-close" aria-label="Закрити">×</button>
-      <img id="lightbox-img" src="" alt="" />
+      <img id="lightbox-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="" />
       <div id="lightbox-caption" class="lightbox-caption"></div>
     </div>
   </div>
 
-  <script src="script.js?v=20260421-1"></script>
+  <script src="script.js?v=20260802-4"></script>
   <script src="events-2026.js?v=20260421-1"></script>
   <script src="planner-2026.js?v=20260421-1"></script>
 </body>
