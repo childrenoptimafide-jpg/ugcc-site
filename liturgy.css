@@ -1,0 +1,53 @@
+@import url("liturgy-assets/fonts.css");
+
+html.liturgy-reader { scroll-behavior: auto; }
+.liturgy-page { background: #f4f6f8; color: #000; }
+.reader-top { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 16px; justify-content: space-between; padding: 10px max(16px, env(safe-area-inset-left)); background: #fff; border-bottom: 1px solid var(--line); }
+.reader-back { display: inline-flex; align-items: center; min-height: 44px; color: var(--primary-dark); font: 600 .95rem/1.4 "Inter", system-ui, sans-serif; }
+.reader-name { color: var(--muted); font-size: .85rem; text-align: right; }
+.reader-main { width: min(860px, calc(100% - 32px)); margin: 24px auto 110px; padding: 28px 46px; background: #fff; border: 14px solid transparent; border-image: url("liturgy-assets/frame.png") 36 round; box-shadow: var(--shadow); }
+.reader-running-title { color: #f00; font: italic .9rem Georgia, serif; text-align: center; margin: 0 0 22px; }
+.liturgy-text { font-family: "Georgia Liturgia", Georgia, serif; font-size: 1.375rem; line-height: 1.55; overflow-wrap: anywhere; word-break: normal; hyphens: none; user-select: text; }
+.doc-paragraph { font-size: 1em; font-weight: normal; line-height: inherit; margin: 0 0 .32em; white-space: pre-wrap; scroll-margin-top: 85px; }
+.doc-ink { color: #000; }
+.doc-rubric { color: #f00; }
+.doc-title, .doc-subtitle { text-wrap: balance; }
+.doc-heading1, .doc-heading2, .doc-heading3 { scroll-margin-top: 90px; }
+.doc-boxed { margin-bottom: 0 !important; padding: .2em .6em; }
+.doc-boxed[style*="border-top"] { padding-top: .6em; margin-top: .65em !important; }
+.doc-boxed[style*="border-bottom"] { padding-bottom: .6em; margin-bottom: .65em !important; }
+.doc-icon { display: block; width: auto; height: auto; max-width: 100%; max-height: 360px; margin: 0 auto 28px; object-fit: contain; }
+.doc-table { width: 100%; border-collapse: collapse; table-layout: fixed; margin: 1.1em 0; }
+.doc-table td { width: 33.333%; padding: .25em; vertical-align: middle; overflow-wrap: anywhere; }
+.doc-table .doc-paragraph { margin: 0 !important; }
+.doc-cell-bordered { border: 1px solid currentColor; }
+.doc-footnotes { border-top: 1px solid #777; margin-top: 2em; padding-top: 1em; }
+.doc-footnotes h2 { font-size: 1em; }
+.doc-footnotes ol { margin: 0; padding-left: 1.4em; }
+.doc-footnotes li { scroll-margin-top: 90px; margin-bottom: .7em; }
+.note-ref, .note-back { text-decoration: underline; color: var(--primary-dark); }
+.note-ref { display: inline-flex; justify-content: center; min-width: 26px; padding: 0 3px; }
+.note-back { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; }
+.reader-controls { position: fixed; z-index: 10; bottom: max(14px, env(safe-area-inset-bottom)); left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 12px; background: #fff; border: 1px solid var(--line); box-shadow: var(--shadow); border-radius: 16px; padding: 7px; }
+.reader-controls .font-size-btn { min-width: 52px; min-height: 48px; font-size: 1.15rem; color: var(--primary-dark); touch-action: manipulation; }
+.reader-controls .font-size-btn:disabled { opacity: .45; cursor: default; }
+.reader-controls output { min-width: 48px; text-align: center; font-size: .9rem; color: var(--muted); }
+.reader-bottom-back { margin-top: 24px; }
+.reader-skip { position: fixed; top: -100px; left: 12px; z-index: 20; padding: 12px; background: white; }
+.reader-skip:focus { top: 10px; }
+.liturgy-page :focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
+@media (max-width: 600px) {
+  .reader-top { gap: 8px; }
+  .reader-name { font-size: .75rem; max-width: 44%; }
+  .reader-main { width: calc(100% - 16px); padding: 18px 10px; border-width: 7px; margin-top: 12px; }
+  .liturgy-text { font-size: 1.25rem; }
+  .reader-running-title { font-size: .8rem; }
+  .doc-icon { max-height: 240px; margin-bottom: 20px; }
+  .doc-table { font-size: .85em; }
+}
+@media print {
+  .reader-top, .reader-controls, .reader-bottom-back, .reader-skip { display: none; }
+  .reader-main { width: 100%; margin: 0; box-shadow: none; }
+  .doc-paragraph { break-inside: avoid; }
+  .doc-title, .doc-heading1, .doc-heading2, .doc-heading3 { break-after: avoid; }
+}

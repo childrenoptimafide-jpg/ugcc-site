@@ -915,3 +915,9 @@ section[id] {
   .intention-form { padding: 16px 18px 20px; gap: 12px; }
   .intention-submit-btn { width: 100%; min-width: 0; }
 }
+
+/* Full Liturgy card uses the existing prayer card geometry and tokens. */
+.prayer-liturgy-link { color: inherit; font-family: inherit; line-height: inherit; }
+.prayer-liturgy-action { display: inline-block; color: var(--primary); font-size: .85rem; font-weight: 600; margin-top: 8px; }
+.prayer-liturgy-link:hover .prayer-liturgy-action { color: var(--gold); }
+.prayer-liturgy-link:focus-visible { outline: 3px solid var(--primary); outline-offset: -4px; border-radius: var(--radius); }

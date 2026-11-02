@@ -5,6 +5,9 @@
 
 const T = {
   ua: {
+    cardLiturgyTitle: "Божественна Літургія",
+    cardLiturgyDesc: "Повний текст Божественної Літургії для молитви та участі в богослужінні.",
+    cardLiturgyBtn: "Читати повний текст",
     brandName: "Парафія Успіння Пресвятої Богородиці",
     brandSub: "Греко-католицька парафія · Кишинів",
     navHistory: "Історія парафії",
@@ -214,6 +217,9 @@ const T = {
   },
 
   en: {
+    cardLiturgyTitle: "Divine Liturgy",
+    cardLiturgyDesc: "The full Ukrainian text of the Divine Liturgy for prayer and participation in worship.",
+    cardLiturgyBtn: "Read the full text",
     brandName: "Dormition of the Mother of God Parish",
     brandSub: "Greek Catholic Parish · Chisinau",
     navHistory: "Parish History",
@@ -423,6 +429,9 @@ const T = {
   },
 
   ru: {
+    cardLiturgyTitle: "Божественная Литургия",
+    cardLiturgyDesc: "Полный украинский текст Божественной Литургии для молитвы и участия в богослужении.",
+    cardLiturgyBtn: "Читать полный текст",
     brandName: "Приход Успения Пресвятой Богородицы",
     brandSub: "Греко-католический приход · Кишинев",
     navHistory: "История прихода",
@@ -636,6 +645,8 @@ let currentLang = 'ua';
 
 function setLanguage(lang) {
   currentLang = lang;
+  const liturgyLink = document.getElementById('liturgy-card-link');
+  if (liturgyLink) liturgyLink.href = 'bozhestvenna-liturhiya.html?ui=' + lang;
 
   // Обновление текстов по data-key
   document.querySelectorAll('[data-key]').forEach(el => {
@@ -698,17 +709,7 @@ function togglePrayerCard(cardId) {
   trigger.setAttribute('aria-expanded', isActive);
 }
 
-let prayerFontSizes = { morning: 1, evening: 1 };
-function changeFontSize(cardId, step) {
-  const textContainer = document.getElementById(`text-${cardId}`);
-  if (!textContainer) return;
-
-  prayerFontSizes[cardId] += step * 0.1;
-  if(prayerFontSizes[cardId] < 0.8) prayerFontSizes[cardId] = 0.8;
-  if(prayerFontSizes[cardId] > 1.8) prayerFontSizes[cardId] = 1.8;
-
-  textContainer.style.fontSize = prayerFontSizes[cardId] + 'rem';
-}
+// Font sizing is shared with the Liturgy reader in prayer-font-size.js.
 
 // Copy IBAN Function
 function copyToClipboard(elementId, btnElement) {
@@ -815,7 +816,8 @@ function lightCandle() {
 
 // ===================== INITIALIZATION =====================
 document.addEventListener('DOMContentLoaded', () => {
-  setLanguage('ua');
+  const requestedLang = new URLSearchParams(window.location.search).get('lang');
+  setLanguage(['ua', 'en', 'ru'].includes(requestedLang) ? requestedLang : 'ua');
 
   // Lightbox Gallery
   const lightbox        = document.getElementById('lightbox');
